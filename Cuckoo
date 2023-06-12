@@ -1,1 +1,34 @@
+import time
+import random
+from playsound import playsound
 
+# This is a joke program that allows you
+# to determine the life span by the singing of the cuckoo.
+
+def check(cuckoo_sing):
+
+    # Depending on the set 'cuckoo_sing' value,
+    # the cuckoo starts or continues to chirp at a configurable interval.
+    # As a result of a random custom event,
+    # the countdown stops and the result is displayed.
+
+    while True:
+        print(cuckoo_sing)
+        playsound(u"D:\MyProjects\Python\cuckoo\cuckoo.wav") # Sound to every chirp
+        time.sleep(2)
+        cuckoo_sing += 1
+        if random.randint(1, 15) == 4:
+            print(f"You will die in {cuckoo_sing} years!")
+            time.sleep(3)
+            quit()
+
+
+def main(): # Wrapper function
+    info = "This program will help determine the remaining life span by singing cuckoo"
+    print(info)
+
+    start_singing = 1
+    print(check(start_singing))
+
+if __name__ == '__main__':
+    main()

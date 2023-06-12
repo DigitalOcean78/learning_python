@@ -15,7 +15,7 @@ def check(cuckoo_sing):
 
     while True:
         print(cuckoo_sing)
-        playsound(u"D:\MyProjects\Python\cuckoo\cuckoo.wav") # Sound to every chirp
+        playsound("\path\cuckoo.wav") # Sound to every chirp
         time.sleep(2)
         cuckoo_sing += 1
         if random.randint(1, 15) == 4:

@@ -15,7 +15,7 @@ def main(): # Wrapper function
         second_number = int(input("Please, enter second number: "))
         operation = input("Please, enter one of the special symbols: ")
 
-        print(calculator(first_number, second_number, operation))
+        print(calculate(first_number, second_number, operation))
         solution = input("Do you want to continue? (Enter Yes or No): ")
         if solution == 'Yes':
             continue
@@ -31,7 +31,7 @@ def main(): # Wrapper function
                     quit()
 
 
-def calculator(first_number, second_number, operation):
+def calculate(first_number, second_number, operation):
     """
     Returns: first_number operation second_number = 'x',
     where 'x' is the computed value according
